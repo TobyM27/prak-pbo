@@ -8,7 +8,7 @@ class AkunBank:
     l_limit = 1
     u_limit = 100
 
-    def __init__(self, no_pelanggan, nama_pelanggan, jumlah_saldo):
+    def __init__(self, no_pelanggan, nama_pelanggan, jumlah_saldo) -> None:
         self.__no_pelanggan = no_pelanggan
         self.__nama_pelanggan = nama_pelanggan
         self.__jumlah_saldo = jumlah_saldo
@@ -16,7 +16,7 @@ class AkunBank:
         self.list_pelanggan_nama.append(self.__nama_pelanggan)
         self.list_pelanggan_Saldo.append(self.__jumlah_saldo)
     
-    def menu_utama():
+    def menu_utama(self):
         print("Selamat datang di Bank Jago \n Halo formating needed, ingin melakukan apa?\n1. Lihat saldo\n2. Tarik tunai\n3. Transfer saldo\n4. Gacha dapat uang kaget! promo spesial buat KAMU!\n5. Keluar")
         #opsi 5 tuh gacha dapat uang kaget
 
