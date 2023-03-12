@@ -75,8 +75,7 @@ class AkunBank:
             AkunBank.teks_dekor(self)
 
     def gacha(self):
-        print("Apakah anda siap untuk melakukan gacha uang kaget? (Y/N)")
-        __validasi_gacha = (input(f"Apakah anda yakin tujuan rekening yang anda ketik benar? (Y/N) \n"))
+        __validasi_gacha = (input(f"Apakah anda siap untuk melakukan gacha uang kaget? (Y/N)\n"))
         if __validasi_gacha == ("Y" or 'y'):
             __hasil_gacha = random.randint(AkunBank.l_limit, AkunBank.u_limit)
             if(__hasil_gacha == 50 or 51):
