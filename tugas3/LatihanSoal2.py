@@ -48,6 +48,7 @@ class AkunBank:
         if(self.__jumlah_saldo >= __saldo):
             print("Saldo berhasil ditarik!")
             self.__jumlah_saldo -= __saldo
+            print(f"Setelah penarikan uang, saldo yang tersisa dalam rekening anda sebesar : {self.__jumlah_saldo}")
             AkunBank.teks_dekor(self)
         else:
             print("Nominal saldo yang Anda punya tidak cukup! ")
