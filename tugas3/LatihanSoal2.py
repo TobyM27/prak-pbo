@@ -62,7 +62,7 @@ class AkunBank:
             if __rek_tujuan in self.list_pelanggan_ID:
                 __validasi = (input(f"Apakah anda yakin tujuan rekening yang anda ketik benar? (Y/N) \n"))
                 if __validasi == ("Y" or 'y'):
-                    print(f"Selamat, Proses transfer sejumlah Rp.{__nilai_transfer} ke {self.self.list_pelanggan_ID} sukses! ")
+                    print(f"Selamat, Proses transfer sejumlah Rp.{__nilai_transfer} ke {self.list_pelanggan_ID} sukses! ")
                     AkunBank.teks_dekor(self)
                 elif __validasi == ("N" or "n"):
                     print("Baiklah, silahkan balik ke menu utama untuk mengakses layanan transfer atau lainnya! ")
