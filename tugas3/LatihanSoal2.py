@@ -15,6 +15,10 @@ class AkunBank:
         self.list_pelanggan_ID.append(self.__no_pelanggan)
         self.list_pelanggan_nama.append(self.__nama_pelanggan)
         self.list_pelanggan_Saldo.append(self.__jumlah_saldo)
+
+    def teks_dekor(self):
+        print("-----------------------------------\n")
+        AkunBank.menu_utama(self)
     
     def menu_utama(self):
         print("Selamat datang di Bank JayaJayaJaya \n Halo, apa yang anda ingin lakukan sekarang?\n1. Lihat saldo\n2. Tarik tunai\n3. Transfer saldo\n4. Gacha dapat uang kaget! promo spesial buat KAMU!\n5. Keluar")
@@ -37,16 +41,18 @@ class AkunBank:
 
     def lihat_saldo(self):
         print(f"{self.__nama_pelanggan} memiliki saldo Rp {self.__jumlah_saldo}")
-        AkunBank.menu_utama(self)
+        AkunBank.teks_dekor()
 
     def tarik_tunai(self):
         __saldo = int(input("Masukkan jumlah nominal yang ingin ditarik: "))
         if(self.__jumlah_saldo >= __saldo):
             print("Saldo berhasil ditarik!")
             self.__jumlah_saldo -= __saldo
+            AkunBank.teks_dekor()
         else:
             print("Nominal saldo yang Anda punya tidak cukup! ")
             self.tarik_tunai()
+            AkunBank.teks_dekor()
 
     def transfer(self):
         __nilai_transfer = int(input("Masukkan nominal yang ingin ditransfer: "))
@@ -56,16 +62,16 @@ class AkunBank:
                 __validasi = (input(f"Apakah anda yakin tujuan rekening yang anda ketik benar? (Y/N) \n"))
                 if __validasi == ("Y" or 'y'):
                     print(f"Selamat, Proses transfer sejumlah Rp.{__nilai_transfer} ke {self.self.list_pelanggan_ID} sukses! ")
-                    AkunBank.menu_utama(self)
+                    AkunBank.teks_dekor()
                 elif __validasi == ("N" or "n"):
                     print("Baiklah, silahkan balik ke menu utama untuk mengakses layanan transfer atau lainnya! ")
-                    AkunBank.menu_utama(self)
+                    AkunBank.teks_dekor()
             else:
                 print("Mohon maaf, no pelanggan yang anda input tidak terdapat dalam database bank kami!")
-                AkunBank.menu_utama(self)
+                AkunBank.teks_dekor()
         else:
             print(f"Mohon maaf, namun jumlah saldo yang anda miliki dalam rekening ini tidak cukup untuk melakukan proses transaksi! ")
-            AkunBank.menu_utama(self)
+            AkunBank.teks_dekor()
 
     def gacha(self):
         print("Apakah anda siap untuk melakukan gacha uang kaget? (Y/N)")
@@ -75,12 +81,12 @@ class AkunBank:
             if(__hasil_gacha == 50 or 51):
                 print("Selamat anda telah memenangkan gacha. Rp50.000 akan segera ditambahkan ke rekening anda")
                 self.__jumlah_saldo += 50000
+            else :
+                print("Mohon maaf, sepertinya hoki anda sedang tidak baik-baik saja hari ini! ")
+                AkunBank.teks_dekor()
         elif __validasi_gacha == ("N" or "n"):
             print("Baiklah, silahkan balik ke menu utama untuk mengakses layanan Bank JayaJayaJaya ")
-            AkunBank.menu_utama(self)
-
-        __hasil_gacha = random.randint(AkunBank.l_limit, AkunBank.u_limit)
-
+            AkunBank.teks_dekor()
 
 Akun1 = AkunBank(1234, "Toby Manurung", 5000000)
 Akun2 = AkunBank(3456, "Daniel Hutabarat", 4000000)
