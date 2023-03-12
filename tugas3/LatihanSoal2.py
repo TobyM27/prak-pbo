@@ -22,13 +22,13 @@ class AkunBank:
 
         input_user = int(input("Masukkan nomor input: "))
         if input_user == 1:
-            AkunBank.lihat_saldo()
+            AkunBank.lihat_saldo(self)
         elif input_user == 2:
-            AkunBank.tarik_tunai
+            AkunBank.tarik_tunai(self)
         elif input_user == 3:
-            AkunBank.transfer
+            AkunBank.transfer(self)
         elif input_user == 4:
-            AkunBank.gacha
+            AkunBank.gacha(self)
         elif input_user == 5:
             print("kami berterima kasih atas pilihan anda untuk menggunakan bank JayaJayaJaya! ")
             exit()
