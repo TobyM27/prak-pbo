@@ -17,7 +17,7 @@ class AkunBank:
         self.list_pelanggan_Saldo.append(self.__jumlah_saldo)
     
     def menu_utama(self):
-        print("Selamat datang di Bank JayaJayaJaya \n Halo formating needed, ingin melakukan apa?\n1. Lihat saldo\n2. Tarik tunai\n3. Transfer saldo\n4. Gacha dapat uang kaget! promo spesial buat KAMU!\n5. Keluar")
+        print("Selamat datang di Bank JayaJayaJaya \n Halo, apa yang anda ingin lakukan sekarang?\n1. Lihat saldo\n2. Tarik tunai\n3. Transfer saldo\n4. Gacha dapat uang kaget! promo spesial buat KAMU!\n5. Keluar")
         #opsi 5 tuh gacha dapat uang kaget
 
         input_user = int(input("Masukkan nomor input: "))
@@ -35,11 +35,11 @@ class AkunBank:
         else:
             print("Mohon hanya memberi input yang telah kami tetapkan! (yaitu 1-5)")
 
-    def lihat_saldo():
+    def lihat_saldo(self):
         print(f"{self.__nama_pelanggan} memiliki saldo Rp {self.__jumlah_saldo}")
         AkunBank.menu_utama(self)
 
-    def tarik_tunai():
+    def tarik_tunai(self):
         __saldo = int(input("Masukkan jumlah nominal yang ingin ditarik: "))
         if(self.__jumlah_saldo >= __saldo):
             print("Saldo berhasil ditarik!")
@@ -48,7 +48,7 @@ class AkunBank:
             print("Nominal saldo yang Anda punya tidak cukup! ")
             self.tarik_tunai()
 
-    def transfer():
+    def transfer(self):
         __nilai_transfer = int(input("Masukkan nominal yang ingin ditransfer: "))
         if __nilai_transfer <= self.__jumlah_saldo:
             __rek_tujuan = int(input("Masukkan no rekening tujuan: "))
@@ -67,7 +67,7 @@ class AkunBank:
             print(f"Mohon maaf, namun jumlah saldo yang anda miliki dalam rekening ini tidak cukup untuk melakukan proses transaksi! ")
             AkunBank.menu_utama(self)
 
-    def gacha():
+    def gacha(self):
         print("Apakah anda siap untuk melakukan gacha uang kaget? (Y/N)")
         __validasi_gacha = (input(f"Apakah anda yakin tujuan rekening yang anda ketik benar? (Y/N) \n"))
         if __validasi_gacha == ("Y" or 'y'):
