@@ -1,7 +1,7 @@
 #TugasLatihanNo2
 import random
 
-class AkunBank():
+class AkunBank:
     list_pelanggan_ID = []
     list_pelanggan_nama = []
     list_pelanggan_Saldo = []
@@ -83,7 +83,7 @@ class AkunBank():
 
 
 Akun1 = AkunBank(1234, "Toby Manurung", 5000000)
-Akun2 = AkunBank(1234, "Daniel Hutabarat", 4000000)
-Akun2 = AkunBank(1234, "Yesi Tampubolon", 6000000)
+Akun2 = AkunBank(3456, "Daniel Hutabarat", 4000000)
+Akun2 = AkunBank(1556, "Yesi Tampubolon", 6000000)
 
 Akun1.menu_utama()
