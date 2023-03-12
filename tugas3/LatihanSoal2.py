@@ -17,7 +17,7 @@ class AkunBank:
         self.list_pelanggan_Saldo.append(self.__jumlah_saldo)
     
     def menu_utama(self):
-        print("Selamat datang di Bank Jago \n Halo formating needed, ingin melakukan apa?\n1. Lihat saldo\n2. Tarik tunai\n3. Transfer saldo\n4. Gacha dapat uang kaget! promo spesial buat KAMU!\n5. Keluar")
+        print("Selamat datang di Bank JayaJayaJaya \n Halo formating needed, ingin melakukan apa?\n1. Lihat saldo\n2. Tarik tunai\n3. Transfer saldo\n4. Gacha dapat uang kaget! promo spesial buat KAMU!\n5. Keluar")
         #opsi 5 tuh gacha dapat uang kaget
 
         input_user = int(input("Masukkan nomor input: "))
