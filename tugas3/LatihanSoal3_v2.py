@@ -23,8 +23,7 @@ class SistemPOS:
         if(pilihan in SistemPOS.__jenisBarang): #memeriksa apabilan cemilan yang dipilih terdapat dalam database warung 
             self.saldo -= SistemPOS.__jenisBarang[pilihan] #apabila uang yang dimiliki oleh pengguna cukup untuk membayar semua itu, dia butuh rf
             print(f"Cemilan yang anda ingin berhasil dibayar, saldo anda sekarang = {self.saldo}")
-            siap nat 
-            
+
         else :
             print("Cemilan yang anda sedang cari tidak tersedia untuk saat ini! Kami mohon!")
 
